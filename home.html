@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HOME page of DECOR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+     <body>
+        <style>*{
+        margin:0px;
+        padding:0px;
+        }
+         a {
+             color: white;
+     text-decoration: none ;
+  }
+a:hover
+  {
+    color:orange;
+    text-decoration:none;
+    cursor:pointer;
+   }
+        .bgimage{
+            background-image: url("interior.jpg");
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100vh;
+        }
+        .menu{
+            width: 100%;
+            height:100px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .leftmenu{
+            width: 25%;
+            line-height: 80px;
+            float:left;
+        }
+        .leftmenu h4{
+            padding-left: 60px;
+            font-weight: bold;
+            color: white;
+            font-size: 70px;
+            font-family: "montserrat",sans-serif;
+            
+        }
+        .rightmenu{
+            width: 75%;
+            height: 100px;
+            float: right;
+         
+        }
+        .rightmenu ul{
+            margin-left: 200px;
+        }
+        .rightmenu ul li{
+            font-family: "montserrat",sans-serif;
+            display: inline-block;
+            list-style: none;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            line-height: 100px;
+            margin-left: 60px;
+            text-transform: uppercase;
+        }
+        #firstlist{
+            color:orange;
+        }
+        
+        .text{
+            margin-top: 125px;
+            width: 100%;
+            color: white;
+            text-transform: uppercase;
+           text-align: center; 
+        }
+        .text h4{
+            font-size: 20px;
+            font-family: "open sans",sans-serif;
+            
+        }
+        .text h1{
+            font-size: 60px;
+            color: white;
+            font-family: "montserrat",sans-serif;
+            font-weight: bold;
+            margin: 14px 0px;
+        }
+        
+        .text h3{
+            font-size: 15px;
+            font-family: "open sans",sans-serif;
+            color: white;
+        }
+        #button1{
+            background-color: transparent;
+            border:none;
+            font-size: 12px;
+            font-family: "montserrat",sans-serif;
+            text-transform: uppercase;
+            line-height: 40px;
+            width: 150px;
+              border:3px solid white;
+            margin-top: 25px;
+            color: white;
+            font-weight: bold;
+            
+        }#button1:hover
+  {
+    color:orange;
+    text-decoration:none;
+    cursor:pointer;
+   }
+        #button2{
+            background-color: transparent;
+            border:none;
+            color: white;
+            font-weight: bold;
+                        font-family: "montserrat",sans-serif;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        line-height: 40px;
+                        border:3px solid white;
+                        width: 150px;
+        }#button2:hover
+  {
+    color:orange;
+    text-decoration:none;
+    cursor:pointer;
+   }
+    </style>
+   
+        
+        <div class="bgimage">
+            <div class="menu">
+                <div class="leftmenu">
+                    <h4>DECOR</h4>
+                </div>
+                <div class="rightmenu">
+                    <ul>
+                        <li id="firstlist">HOME</li>
+                        <li><a href="design.html">DESIGNS</a></li>
+                        <li><a href="about.html"> ABOUT US</a></li>
+                        <Li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            </div>
+                <div class="text">
+                    <h4>DESIGN*DEVELOPMENT*BRANDING</h4>
+                    <H1>CREATIVE & EXPERIENCED</H1>
+                    <h3>WE ARE THE ONE OF THE WORLD'S TOP CREATIVE DESIGN AGENCIES</h3>
+                    <form>
+                    <button formaction="login.html" id="button1">LOGIN</button>
+                    <button formaction="register.html" id="button2">REGISTER</button>
+                    </form>
+                </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+             function validation(){
+              var fname=document.register.fname.value;
+               var lname=document.register.lname.value;
+                var email=document.register.email.value;
+                 var uname=document.register.uname.value;
+                 
+                 var pwd=document.register.pwd.value;
+             var cpwd=document.register.cpwd.value;
+                if(fname==""|| lname==""|| email=="" || uname=="" || pwd=="" || cpwd=="")
+                {
+                    alert("All fields must be filled");
+                    return;
+                }
+             
+                if(pwd.length<8 || pwd.length>12)
+                {
+                    alert("Password must be 8 to 12 characters");
+                    return;
+                }
+                if(pwd != cpwd)
+                {
+                    alert("confirmation password is not same")
+                }
+                
+                var str=uname.slice(0,1);
+                if(uname.slice(0,1)=="_"||uname.slice(0,1)=="@"||str.match(/[0-9]/g)!= null)
+                {
+                    alert("username should not start with _,@ and Number");
+                    return;
+                }
+                
+                var str=fname.slice(0,1);
+                if(fname.slice(0,1)=="_"||fname.slice(0,1)=="@"||str.match(/[0-9]/g)!= null)
+                {
+                    alert("firstname should not start with _,@ and Number");
+                    return;
+                }
+                
+                var str=lname.slice(0,1);
+                if(lname.slice(0,1)=="_"||lname.slice(0,1)=="@"||str.match(/[0-9]/g)!= null)
+                {
+                    alert("lastname should not start with _,@ and Number");
+                    return;
+                }
+                var str=email.slice(0,1);
+                if(email.slice(0,1)=="_"||email.slice(0,1)=="@")
+                {
+                    alert("username should not start with _,@");
+                    return;
+                }
+            }
+             </script>
+    </head>
+    <body>
+    <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:url(interior.jpg);
+                background-size: 100% 100%;
+                width: 100%;
+                height: 100vh;
+                background-size: cover;
+                font-family: sans-serif;
+         
+            }
+            h1{
+                margin: 0;
+                padding: 0 0 15px;
+                text-align: center;
+                font-size: 22px;
+            }
+            #button1:hover{color: orange; 
+     
+        }
+        #button2:hover{color: orange; 
+     
+        }
+        .rbox{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width:400px;
+                background: rgba(0,0,0,.5);
+                box-shadow:0 15px 25px rgba( 0,0,0,.3);
+                border-radius:10px; 
+                padding: 40px;
+            
+            }
+            .rbox h2{
+                margin: 0;
+                padding: 0 0 20px;
+                color: #fff;
+                text-align: center;
+                font-size: 30px;
+            }
+            input{
+                
+                color: white;
+                width: 70%;
+                outline: none;
+                padding: 10px 11px;
+                border:1px #aaa solid;
+                font-size: 15px;
+                background-color: rgba(0,0,0,0);
+                display: block;
+                margin:20px auto;
+            }
+            
+        #button1{
+            background-color: transparent;
+            border:none;
+            font-size: 15px;
+            font-family: "montserrat",sans-serif;
+            text-transform: uppercase;
+            line-height: 30px;
+            width: 150px;
+              border:2px solid white;
+            margin-top: 25px;
+            color: white;
+            font-weight: bold;
+            
+        }
+        #button2{
+            background-color: transparent;
+            border:none;
+            font-size: 14px;
+            font-family: "montserrat",sans-serif;
+            text-transform: uppercase;
+            line-height: 30px;
+            width: 100px;
+              border:2px solid white;
+            margin-top: 25px;
+            color: white;
+            font-weight: bold;
+            
+        }
+        </STYLE>
+   
+           <div class="rbox">
+            <h2>Registration Form</h2>
+            <form   name="register" onsubmit="return validation()"  method="post">
+                <input type="text" name="fname" class="textinput" value="" placeholder="FIRST NAME*">
+                <input type="text" name="lname"   class="textinput" value="" placeholder="LAST NAME*" />
+                <input type="email" name="email"  class="textinput" value="" placeholder="EMAIL ID*"/>
+                <input type="text" name="uname" class="textinput"  value="" placeholder="USER NAME"  />
+                <input type="password" name="pwd" class="textinput" value="" placeholder="PASSWORD"/>
+              <input type="password" name="cpwd" class="textinput" value="" placeholder="CONFIRMATION PASSWORD"/>
+                <p align="center">  
+                    <button  type="submit"  value="" id="button1">REGISTER</button><br>
+                    <button   formaction="home.html" id="button2">BACK</button><br></p>
+            </form>
+                </div>
+    
+      
+    </body>
+</html>

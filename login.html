@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function validation(){
+                var uname=document.login.uname.value;
+                var pwd=document.login.pwd.value;
+                if(uname=="" || pwd=="")
+                {
+                    alert("Both fields should not be blank");
+                    return;
+                }
+                if(pwd.length<8 || pwd.length>12)
+                {
+                    alert("Password must be 8 to 12 characters");
+                    return;
+                }
+                var str=uname.slice(0,1);
+                if(uname.slice(0,1)=="_"||uname.slice(0,1)=="@"||str.match(/[0-9]/g)!= null)
+                {
+                    alert("username should not start with _,@ and Number");
+                    return;
+                }
+            }
+            </script>
+
+    </head>
+    <body>
+        <style>
+            
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:url(interior.jpg);
+                background-size: 100% 100%;
+                width: 100%;
+                height: 100vh;
+                background-size: cover;
+                font-family: sans-serif;
+         
+            }
+            
+            #button1:hover{color: orange; 
+     
+        }
+        
+        .rbox{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width:400px;
+                background: rgba(0,0,0,.5);
+                box-shadow:0 15px 25px rgba( 0,0,0,.3);
+                border-radius:10px; 
+                padding: 40px;
+            
+            }
+            
+            .rbox h2{
+                margin: 0;
+                padding: 0 0 20px;
+                color: #fff;
+                text-align: center;
+                font-size: 30px;
+            }
+            
+            input{
+                
+                color: white;
+                width: 70%;
+                outline: none;
+                padding: 10px 11px;
+                border:1px #aaa solid;
+                font-size: 15px;
+                background-color: rgba(0,0,0,0);
+                display: block;
+                margin:20px auto;
+            }
+        #button1{
+            background-color: transparent;
+            border:none;
+            font-size: 15px;
+            font-family: "montserrat",sans-serif;
+            text-transform: uppercase;
+            line-height: 30px;
+            width: 150px;
+              border:2px solid white;
+            margin-top: 25px;
+            color: white;
+            font-weight: bold;
+            
+        }
+        </style>
+        <form  name="login" onsubmit="return validation()"  method="post">
+                   <div class="rbox">
+            <h2>Login Form</h2>
+          
+                <input type="text" name="uname" value="" placeholder="USER NAME"  />
+                <input type="password" name="pwd" value="" placeholder="PASSWORD"/>
+               <p align="center">   
+                   <button id="button1" type="submit">LOGIN</button><br></p>
+            
+        </div>  
+        </form>
+        
+    </body>
+</html>
